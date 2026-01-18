@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP — Мы ждём вас!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+    <img src="photo.jpg" alt="Фото пары" class="hero-photo">
+    <div class="hero-text">
+        <h2>Виолетта и Кирилл</h2>
+        <p>26.07.2026</p>
+    </div>
+</header>
+
+<section class="content">
+    <h1>Дорогие друзья!</h1>
+    <p class="intro">
+        Совсем скоро состоится наше важное событие — день нашей свадьбы!<br><br>
+        Перед тем как отправить вам бумажные приглашения, нам нужно уточнить несколько деталей,
+        чтобы всё прошло красиво и удобно ❤️<br><br>
+        Пожалуйста, заполните анкету ниже.
+    </p>
+
+    <form action="https://formspree.io/f/xdknqvoa" method="POST" class="rsvp-form">
+        <label>Имя и фамилия</label>
+        <input type="text" name="name" required>
+
+        <label>Будете присутствовать?</label>
+        <select name="attendance" required>
+            <option value="Да">Да</option>
+            <option value="Нет">Нет</option>
+            <option value="Возможно">Возможно</option>
+        </select>
+
+        <label>Количество гостей</label>
+        <input type="number" name="guests" min="1" value="1">
+
+        <label>Отношение к алкоголю</label>
+        <select name="alcohol">
+            <option value="Пью">Пью</option>
+            <option value="Не пью">Не пью</option>
+            <option value="Неважно">Неважно</option>
+        </select>
+
+        <label>Пожелания</label>
+        <textarea name="notes" rows="3"></textarea>
+
+        <label>Адрес для отправки приглашения</label>
+        <textarea name="address" rows="3" required></textarea>
+
+        <label>Контакты (телефон или email)</label>
+        <input type="text" name="contact" required>
+
+        <button type="submit">Отправить</button>
+
+        <input type="hidden" name="_redirect" value="success.html">
+        <input type="hidden" name="_subject" value="RSVP — Новый ответ">
+        <input type="hidden" name="_replyto" value="violetta.solomina.ks3383@gmail.com">
+    </form>
+</section>
+
+<footer>
+    <p>Мы с радостью ждём этого дня вместе с вами 🤍</p>
+</footer>
+
+</body>
+</html>
